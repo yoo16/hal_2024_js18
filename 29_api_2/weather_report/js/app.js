@@ -8,8 +8,8 @@ var weatherData;
 async function fetchWeather() {
     try {
         // API URI
-        const uri = 'api/weather/report.php';
-        // const uri = 'api/weather/list.json';
+        // const uri = 'api/weather/report.php';
+        const uri = 'data/report.json';
 
         // TODO:APIから非同期でデータ取得: fetch()
         const response = await fetch(uri);

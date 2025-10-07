@@ -37,9 +37,9 @@ function drawKeypoints(keypoints) {
         if (point.score > 0.5) {
             // 座標変換
             // TODO: X座標: x * canvas.width / video.videoWidth
-            const x = 0;
+            const x = point.x * canvas.width / video.videoWidth;
             // TODO: Y座標: y * canvas.height / video.videoHeight
-            const y = 0;
+            const y = point.y * canvas.height / video.videoHeight;
             // 描画
             ctx.beginPath();
             ctx.arc(x, y, 2, 0, 2 * Math.PI);
@@ -63,13 +63,13 @@ function drawSkeleton(keypoints) {
         if (p1.score > 0.3 && p2.score > 0.3) {
             // 座標変換
             // TODO: X1座標: x * canvas.width / video.videoWidth
-            const x1 = 0;
+            const x1 = p1.x * canvas.width / video.videoWidth;
             // TODO: Y1座標: x * canvas.width / video.videoWidth
-            const y1 = 0;
+            const y1 = p1.y * canvas.height / video.videoHeight;
             // TODO: X2座標: x * canvas.width / video.videoWidth
-            const x2 = 0;
+            const x2 = p2.x * canvas.width / video.videoWidth;
             // TODO: Y2座標: x * canvas.width / video.videoWidth
-            const y2 = 0;
+            const y2 = p2.y * canvas.height / video.videoHeight;
             // 骨格を描画
             ctx.beginPath();
             ctx.moveTo(x1, y1);
